@@ -32,5 +32,5 @@ int main()
     for(int i=0;i<10;i++)
         F[i]=-1;
     printf("%d\n",fib(10));
-    printf("%d\n", fib(5));
+    printf("%d\n",mfib(7));
 }
