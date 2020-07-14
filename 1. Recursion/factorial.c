@@ -5,11 +5,11 @@ int fact(int n)
     {
         return 1;
     }
-    return sum(n - 1) * n;
+    return fact(n - 1) * n;
 }
-int fact()
+int main()
 {
-    int ans = sum(5);
+    int ans = fact(5);
     printf("%d \n", ans);
     return 0;
 }

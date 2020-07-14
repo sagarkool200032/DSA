@@ -86,13 +86,12 @@ struct Array
      {
        while(d < arr.A[i]-i)
         printf("Missing Element in array3: %d\n",i+d++);
-     }
-      
+     }  
    }
  }
 
 // (Fastest Method but consumes memory)
-// finding multiple missing elements in unsorted arry starting from low to high natural numbers
+// finding multiple missing elements in unsorted array
 // Time Complexity: O(n) (Using Hash Table/BitSet) 
  int FindMissing3(struct Array arr)
  {
@@ -108,8 +107,8 @@ struct Array
   for(int i=0; i<n;i++)
     B[arr.A[i]]++;
   //print missing elements
-  for(int i=1;i<=h;i++)
-    if(B[i]==0 && i>l)   // to start from 1 remove i>l conditon
+  for(int i=l;i<=h;i++)
+    if(B[i]==0)  
       printf("Missing Elements in array4: %d\n",i);
  }
 

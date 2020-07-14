@@ -17,7 +17,7 @@ void Display(struct Array arr)
   printf("%d ",arr.A[i]);
 }
 
-
+// Time Complexity: O(m+n) == O(n) [O is theta]
 struct Array* Union(struct Array *arr1,struct Array *arr2)
 {
   int i,j,k;
@@ -48,7 +48,7 @@ struct Array* Union(struct Array *arr1,struct Array *arr2)
   return arr3;
 }
 
-
+// Time Complexity: O(m+n) == O(n) [O is theta]
 struct Array* Intersection(struct Array *arr1,struct Array *arr2)
 {
   int i,j,k;

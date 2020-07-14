@@ -84,7 +84,7 @@ struct Array
     }
  }
 
-// finding pair of elements with sum k in soreted array
+// finding pair of elements with sum k in sorted array
 // Time Complexity: O(n)
  int Pair2(struct Array arr,int k)
  {
