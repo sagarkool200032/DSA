@@ -14,7 +14,7 @@ void display(struct Node *p)
         printf("%d ",p->data);
         p = p->next;
     }
-    printf("\n");     
+    printf("\n\n");     
 }
 
 void enterData(int x)

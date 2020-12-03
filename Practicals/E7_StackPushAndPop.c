@@ -6,7 +6,7 @@ void Display(int * st)
 {
     for(int i=top;i>=0;i--)
         printf("%d ",st[i]);
-    printf("\n");
+    printf("\n\n");
 }
 
 void push(int * st, int x)

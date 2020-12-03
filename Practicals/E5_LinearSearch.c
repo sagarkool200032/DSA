@@ -8,7 +8,8 @@ int LinearSearch(int * arr,int n,int key)
         if(key==arr[i])
             return i;
     }
-    return -1;
+    printf("Element Not Found");
+    return 0;
 }
 
 int main()
@@ -21,10 +22,6 @@ int main()
         scanf("%d",&arr[i]);
     printf("Enter Key: ");
     scanf("%d",&key);
-    printf("Element found at %d position\n",LinearSearch(arr,n,key));
+    if(LinearSearch(arr,n,key))
+        printf("Element found at %d position\n",LinearSearch(arr,n,key));
 }   
-
-
-
-
-

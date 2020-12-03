@@ -11,7 +11,7 @@ void display(Node p)
 {
     if(p==NULL)
     {
-        printf("Stack is empty\n");
+        printf("Queue is empty\n");
         return;
     }
     printf("current Queue---->");
@@ -20,7 +20,7 @@ void display(Node p)
         printf("%d ",p->data);
         p = p->next;
     }
-    printf("\n");     
+    printf("\n\n");     
 }
 
 void enqueue(int x)

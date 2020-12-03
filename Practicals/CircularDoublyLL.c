@@ -4,7 +4,7 @@
 struct Node{
     int data;
     struct Node * prev,* next;
-}* head = NULL,* last = NULL;
+}* head = NULL;
 
 void display(struct Node *p)
 {
@@ -17,23 +17,34 @@ void display(struct Node *p)
     printf("\n");     
 }
 
-void enterData(int x)
+void Rdisplay(struct Node *p)
+{
+    printf("Reverse Linked List---->");
+    do
+    {
+        printf("%d ",p->data);
+        p = p->prev;
+    }while(p!=head->prev);
+    printf("\n");     
+}
+
+void enterData(struct Node *p,int x)
 {
     struct Node * temp;
     temp = (struct Node *)malloc(sizeof(struct Node));
     temp->data = x;
-    temp->next = head;
     if(head == NULL)
     {
-        temp->prev = NULL;
+        temp->next = temp->prev = temp;
         head = temp;
-        last = temp;
     }
     else
     {
-        temp->prev = last;
-        last->next = temp;
-        last = temp;
+       struct Node * last = head->prev; // last node
+       temp->next = head;
+       head->prev = temp;
+       temp->prev = last;
+       last->next = temp;  
     }
 }
 
@@ -42,17 +53,19 @@ int main()
     int option = 1;
     while(option!=0)
     {
-        printf("1.Enter Data\n2.Exit \nEnter Option: ");
+        printf("1.Enter Data\n2.Reverse Display\n3.Exit \nEnter Option: ");
         scanf("%d",&option);
         if(option==1)
         {
             int n;
             printf("Enter Data in Linked List: ");
             scanf("%d",&n);
-            enterData(n);
+            enterData(head,n);
             display(head);
         }
+        if(option==2)
+            Rdisplay(head->prev);
         else
-            printf("hello");
+            option=0;
     }
 }

@@ -19,7 +19,7 @@ void Insert(int * arr, int * n, int index, int x)
       *n+=1;
     }
     else
-        printf("Not Possible !\n");
+        printf("Invalid Index\n");
  }
 
 int main()

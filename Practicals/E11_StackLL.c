@@ -20,7 +20,7 @@ void display(Node p)
         printf("%d ",p->data);
         p = p->next;
     }
-    printf("\n");     
+    printf("\n\n");     
 }
 
 void push(int x)

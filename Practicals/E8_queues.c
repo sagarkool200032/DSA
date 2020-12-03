@@ -54,7 +54,7 @@ void Display(int q[])
     printf("Current Queue---->  ");
     for(int i=front;i<=rear;i++)
         printf("%d ",q[i]);
-    printf("\n");
+    printf("\n\n");
 }
 
 int main()
